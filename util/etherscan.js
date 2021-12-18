@@ -16,7 +16,7 @@ const decoder = require('ethereum-input-data-decoder-without-fs');
   for (let i = 0; i <= Number(AMOUNT); i++) {
     const res = await axios.get(`${baseURL}/${i}`);
     const data = res.data;
-    console.log(`[${i}] ${data.name}: ${data.image}`);
+    console.log(res.data);
     await sleep(1000);
   }
 })();

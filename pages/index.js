@@ -3,6 +3,8 @@ import Cors from "cors";
 import Web3 from "web3";
 import { useEffect, useState } from "react";
 import { BigNumber } from "bignumber.js";
+import axios from "axios";
+import { parse } from "node-html-parser";
 
 export default function Home() {
   const [result, setResult] = useState("");
@@ -64,6 +66,8 @@ export default function Home() {
     setItems(data);
   }, []);
 
+  useEffect(async () => {});
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
@@ -71,7 +75,7 @@ export default function Home() {
       </Head>
       <div style={{ paddingBottom: 20 }}>
         <h1 className="text-6xl font-bold">Accounts: {accounts}</h1>
-        <h2 className="text-4xl font-bold">Contract: {CONTRACT}</h2>
+        <h2 className="text-4xl font-bold">Enter NFT contract:</h2>
       </div>
       <div>
         <table>
